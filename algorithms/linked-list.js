@@ -10,6 +10,7 @@ class LinkedList {
     this.head = null
   }
 
+  // O(n) and O(1) for start & end
   add(value) {
     const node = new Node(value)
 
@@ -26,6 +27,7 @@ class LinkedList {
     }
   }
 
+  // O(n)
   get(index) {
     if(index > -1) {
       let current = this.head
@@ -40,6 +42,7 @@ class LinkedList {
       return undefined
   }
 
+  // O(n) and O(1) for start
   delete(index) {
     if(this.head === null || index < 0)
       throw new RangeError('Value does not exist in array or list is empty')
@@ -67,6 +70,7 @@ class LinkedList {
     throw new RangeError('Value does not exists in list')
   }
 
+  // O(n) 
   getAll() {
     let current = this.head
     let values = []
